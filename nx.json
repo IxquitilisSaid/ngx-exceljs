@@ -18,5 +18,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "ngx-exceljs": {
+      "tags": []
+    },
+    "ngx-exceljs-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngx-exceljs"]
+    }
+  }
 }
