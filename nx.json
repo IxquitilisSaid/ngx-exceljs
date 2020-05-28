@@ -25,6 +25,21 @@
     "ngx-exceljs-e2e": {
       "tags": [],
       "implicitDependencies": ["ngx-exceljs"]
+    },
+    "csv": {
+      "tags": []
+    },
+    "doc": {
+      "tags": []
+    },
+    "stream": {
+      "tags": []
+    },
+    "utils": {
+      "tags": []
+    },
+    "xlsx": {
+      "tags": []
     }
   }
 }

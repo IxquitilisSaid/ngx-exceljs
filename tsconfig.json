@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ngx-exceljs/csv": ["libs/csv/src/index.ts"],
+      "@ngx-exceljs/doc": ["libs/doc/src/index.ts"],
+      "@ngx-exceljs/stream": ["libs/stream/src/index.ts"],
+      "@ngx-exceljs/utils": ["libs/utils/src/index.ts"],
+      "@ngx-exceljs/xlsx": ["libs/xlsx/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

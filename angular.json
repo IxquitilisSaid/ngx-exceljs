@@ -25,9 +25,7 @@
               "apps/ngx-exceljs/src/favicon.ico",
               "apps/ngx-exceljs/src/assets"
             ],
-            "styles": [
-              "apps/ngx-exceljs/src/styles.scss"
-            ],
+            "styles": ["apps/ngx-exceljs/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -85,10 +83,7 @@
               "apps/ngx-exceljs/tsconfig.app.json",
               "apps/ngx-exceljs/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ngx-exceljs/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/ngx-exceljs/**"]
           }
         },
         "test": {
@@ -125,11 +120,223 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/ngx-exceljs-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/ngx-exceljs-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/ngx-exceljs-e2e/**"]
           }
+        }
+      }
+    },
+    "csv": {
+      "projectType": "library",
+      "root": "libs/csv",
+      "sourceRoot": "libs/csv/src",
+      "prefix": "ngx-exceljs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/csv/tsconfig.lib.json",
+            "project": "libs/csv/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/csv/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/csv/tsconfig.lib.json",
+              "libs/csv/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/csv/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/csv/src/test.ts",
+            "tsConfig": "libs/csv/tsconfig.spec.json",
+            "karmaConfig": "libs/csv/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "doc": {
+      "projectType": "library",
+      "root": "libs/doc",
+      "sourceRoot": "libs/doc/src",
+      "prefix": "ngx-exceljs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/doc/tsconfig.lib.json",
+            "project": "libs/doc/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/doc/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/doc/tsconfig.lib.json",
+              "libs/doc/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/doc/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/doc/src/test.ts",
+            "tsConfig": "libs/doc/tsconfig.spec.json",
+            "karmaConfig": "libs/doc/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "stream": {
+      "projectType": "library",
+      "root": "libs/stream",
+      "sourceRoot": "libs/stream/src",
+      "prefix": "ngx-exceljs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/stream/tsconfig.lib.json",
+            "project": "libs/stream/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/stream/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/stream/tsconfig.lib.json",
+              "libs/stream/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/stream/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/stream/src/test.ts",
+            "tsConfig": "libs/stream/tsconfig.spec.json",
+            "karmaConfig": "libs/stream/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "utils": {
+      "projectType": "library",
+      "root": "libs/utils",
+      "sourceRoot": "libs/utils/src",
+      "prefix": "ngx-exceljs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/utils/tsconfig.lib.json",
+            "project": "libs/utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/utils/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/utils/tsconfig.lib.json",
+              "libs/utils/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/utils/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/utils/src/test.ts",
+            "tsConfig": "libs/utils/tsconfig.spec.json",
+            "karmaConfig": "libs/utils/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "xlsx": {
+      "projectType": "library",
+      "root": "libs/xlsx",
+      "sourceRoot": "libs/xlsx/src",
+      "prefix": "ngx-exceljs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/xlsx/tsconfig.lib.json",
+            "project": "libs/xlsx/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/xlsx/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/xlsx/tsconfig.lib.json",
+              "libs/xlsx/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/xlsx/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/xlsx/src/test.ts",
+            "tsConfig": "libs/xlsx/tsconfig.spec.json",
+            "karmaConfig": "libs/xlsx/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }
